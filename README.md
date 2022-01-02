@@ -7,9 +7,9 @@ The applications of the Wave Equation are vast, from image processing to system 
 
 ## Boundary Conditions (Cauchy Conditions)
 The cable is:
-- fixed at both ends $\Rightarrow u(x=0, t) = u(0,t) = 0, u(x=L, t) = u(L, t) = 0$
-- initially at rest $\Rightarrow \frac{\partial u}{\partial t}(x, t=0) = \frac{\partial u}{\partial t}(x, 0) = 0$
-- nitially displaced to a general position $f(x)$  $\Rightarrow u(x, t=0) = u(x,0) = f(x)$
+- fixed at both ends ![equation](https://latex.codecogs.com/svg.image?%5CRightarrow%20u(x=0,%20t)%20=%20u(0,t)%20=%200,%20u(x=L,%20t)%20=%20u(L,%20t)%20=%200)
+- initially at rest ![equation](https://latex.codecogs.com/svg.image?%5CRightarrow%20%5Cfrac%7B%5Cpartial%20u%7D%7B%5Cpartial%20t%7D(x,%20t=0)%20=%20%5Cfrac%7B%5Cpartial%20u%7D%7B%5Cpartial%20t%7D(x,%200)%20=%200)
+- initially displaced to a general position f(x) = sin(πx) ![equation](https://latex.codecogs.com/svg.image?%5CRightarrow%20u(x,%20t=0)%20=%20u(x,0)%20=%20f(x)%20=%20%5Csin(%5Cpi%20x))
 
 ## Theoretical Underpinning of Numerical Method
 The general n-dimension Wave Equation is\
@@ -28,3 +28,8 @@ Dropping the error terms and substituting the difference equations into the 1D W
 Numerically, given the desired x and t step-sizes (Δx = h and Δt = k respectively), the x-t plane can be partitioned into a mesh, with mesh points of coordinates (ih, jk) for i = {0, 1, ..., xmax/h} and j = {0, 1, ..., tmax/k}. The numerical solution to the 1D Wave Equation is a set of u-values associated with each mesh point which forms the solution function u(x,t). In the mesh array, j gives the row and i gives the column index.
 
 The numerical solution in MATLAB uses the computational molecule applied to 2 subsequent rows (j and j-1 rows) to find the next row (j+1 row). This is an **iterative explicit mesh method**. Row 0 and the first & last columns of the mesh grid are given by boundary conditions. Also, using the boundary condition that the first derivative of u partial to time is zero, with a backward difference approximation at t=0, a row j=-1 is defined where each mesh point is equal to the mesh point of same i in the j=0 row above. These two rows (-1 and 0) given by the boundary conditions are the first iteration used to find row 1 with the computational molecule. Then rows 0 and 1 are used, etc ... No boundary condition is given for an upper j row, so this iterative method is effective as it can be used for any time length from 0s to arbitrary t.
+
+## Analytical Solution
+The analytical solution to the 1D Wave Equation that I calculated with Separation of Variables is:\
+![equation](https://latex.codecogs.com/svg.image?u(x,t)%20=%20%5Csum_%7Bn=1%7D%5E%7B%5Cinfty%7D%20b_n%20%5Csin%20%5Cleft(%20%5Cfrac%7Bn%5Cpi%7D%7BL%7D%20x%5Cright)%20%5Ccos%20%5Cleft(%20%5Cfrac%7Ban%5Cpi%7D%7BL%7D%20t%20%5Cright))\
+where ![equation](https://latex.codecogs.com/svg.image?b_n%20=%20%5Cfrac%7B2%7D%7BL%7D%20%5Cint_0%5EL%20f(x)%20%5Csin%7B%5Cleft(%5Cfrac%7B2%5Cpi%7D%7B2L%7D%20nx%20%5Cright)%7D%20%5CLongrightarrow%20%5Cboxed%7Bb_n%20=%20%5Cfrac%7B2%7D%7BL%7D%20%5Cint_0%5EL%20f(x)%20%5Csin%7B%5Cleft(%5Cfrac%7B%5Cpi%20nx%7D%7BL%7D%20%5Cright)%7D%20%5C,dx%20%7D)
