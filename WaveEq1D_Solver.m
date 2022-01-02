@@ -129,9 +129,8 @@ error = (u_numerical - u_exact);
 percerror = zeros(size(error)); % percent error array
 for j = 1:length(t)
     for i = 2:length(x)-1
-        percerror(j,i) = 0;
-        if mod((j-1)*k, 0.5) == 0
-            percerror(j,i) = 0; % undefined error as exact solution = 0 at t = n/2 for int n >= 1
+        if ~mod((j-1)*k, 0.5) && mod((j-1)*k, 1)
+            percerror(j,i) = NaN; % undefined error as exact solution = 0 at t = n/2 for odd int n >= 1
             continue % skip rest of calculation to avoid division by 0
         else
             percerror(j,i) = error(j,i)/u_exact(j,i) * 100;
