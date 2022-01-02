@@ -8,7 +8,7 @@ The applications of the Wave Equation are vast, from image processing to system 
 ## Boundary Conditions (Cauchy Conditions)
 The cable is:
 - fixed at both ends ![equation](https://latex.codecogs.com/svg.image?%5CRightarrow%20u(x=0,%20t)%20=%20u(0,t)%20=%200,%20u(x=L,%20t)%20=%20u(L,%20t)%20=%200)
-- initially at rest ![equation](https://latex.codecogs.com/svg.image?%5CRightarrow%20%5Cfrac%7B%5Cpartial%20u%7D%7B%5Cpartial%20t%7D(x,%20t=0)%20=%20%5Cfrac%7B%5Cpartial%20u%7D%7B%5Cpartial%20t%7D(x,%200)%20=%200)
+- initially at rest ![equation](https://latex.codecogs.com/svg.image?%5CRightarrow%20%5Cpartial%20u(x,%20t=0)/%5Cpartial%20t%20=%20%5Cpartial%20u/%5Cpartial%20t%20%5Crvert_%7Bt=0%7D%20=%200)
 - initially displaced to a general position f(x) = sin(πx) ![equation](https://latex.codecogs.com/svg.image?%5CRightarrow%20u(x,%20t=0)%20=%20u(x,0)%20=%20f(x)%20=%20%5Csin(%5Cpi%20x))
 
 ## Theoretical Underpinning of Numerical Method
@@ -32,4 +32,7 @@ The numerical solution in MATLAB uses the computational molecule applied to 2 su
 ## Analytical Solution
 The analytical solution to the 1D Wave Equation that I calculated with Separation of Variables is:\
 ![equation](https://latex.codecogs.com/svg.image?u(x,t)%20=%20%5Csum_%7Bn=1%7D%5E%7B%5Cinfty%7D%20b_n%20%5Csin%20%5Cleft(%20%5Cfrac%7Bn%5Cpi%7D%7BL%7D%20x%5Cright)%20%5Ccos%20%5Cleft(%20%5Cfrac%7Ban%5Cpi%7D%7BL%7D%20t%20%5Cright))\
-where ![equation](https://latex.codecogs.com/svg.image?b_n%20=%20%5Cfrac%7B2%7D%7BL%7D%20%5Cint_0%5EL%20f(x)%20%5Csin%7B%5Cleft(%5Cfrac%7B2%5Cpi%7D%7B2L%7D%20nx%20%5Cright)%7D%20%5CLongrightarrow%20%5Cboxed%7Bb_n%20=%20%5Cfrac%7B2%7D%7BL%7D%20%5Cint_0%5EL%20f(x)%20%5Csin%7B%5Cleft(%5Cfrac%7B%5Cpi%20nx%7D%7BL%7D%20%5Cright)%7D%20%5C,dx%20%7D)
+where\
+![equation](https://latex.codecogs.com/svg.image?b_n%20=%20%5Cfrac%7B2%7D%7BL%7D%20%5Cint_0%5EL%20f(x)%20%5Csin%7B%5Cleft(%5Cfrac%7B2%5Cpi%7D%7B2L%7D%20nx%20%5Cright)%7D%20%5CLongrightarrow%20b_n%20=%20%5Cfrac%7B2%7D%7BL%7D%20%5Cint_0%5EL%20f(x)%20%5Csin%7B%5Cleft(%5Cfrac%7B%5Cpi%20nx%7D%7BL%7D%20%5Cright)%7D%20%5C,dx)
+
+For the given boundary condition where f(x) = sin(πx), bn = 1 for n=1 but bn = 0 for integer n>1 as then bn is the integral of orthogonal functions. Hence, here the exact solution is u(x,t) = sin(πx)cos(πt). This is compared to the numerical solution to show the effectiveness of this numerical method.
