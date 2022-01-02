@@ -6,10 +6,10 @@
 The applications of the Wave Equation are vast, from image processing to system vibrations. The scenario for this particular solution is modelling the perpendicular displacement  of a power transmission cable of length L=1 over an arbitrary time interval from t=0s.
 
 ## Theoretical Underpinning of Numerical Method
-The general n-dimension Wave Equation is
+The general n-dimension Wave Equation is\
 ![equation](https://latex.codecogs.com/svg.image?\frac{\partial&space;^2&space;u}{\partial&space;t^2}&space;=&space;a^2&space;\nabla^2&space;u)
 
-In 1 dimension, the 1D Wave Equation is reduced to 
+In 1 dimension, the 1D Wave Equation is reduced to\
 ![equation](https://latex.codecogs.com/svg.image?%5Cfrac%7B%5Cpartial%20%5E2%20u%7D%7B%5Cpartial%20t%5E2%7D%20=%20a%5E2%20%5Cfrac%7B%5Cpartial%20%5E2%20u%7D%7B%5Cpartial%20x%5E2%7D)
 
 Moreover, central difference approximations can be used to represent the second-order partial derivatives:
