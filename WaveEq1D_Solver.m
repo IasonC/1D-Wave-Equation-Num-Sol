@@ -1,3 +1,8 @@
+%% WaveEq1D_Solver.m
+
+%% Copyright 2 Jan 2022 - Iason Chaimalas
+
+
 %%% Define key problem parameters
 
 
