@@ -36,3 +36,6 @@ where\
 ![equation](https://latex.codecogs.com/svg.image?b_n%20=%20%5Cfrac%7B2%7D%7BL%7D%20%5Cint_0%5EL%20f(x)%20%5Csin%7B%5Cleft(%5Cfrac%7B2%5Cpi%7D%7B2L%7D%20nx%20%5Cright)%7D%20%5CLongrightarrow%20b_n%20=%20%5Cfrac%7B2%7D%7BL%7D%20%5Cint_0%5EL%20f(x)%20%5Csin%7B%5Cleft(%5Cfrac%7B%5Cpi%20nx%7D%7BL%7D%20%5Cright)%7D%20%5C,dx)
 
 For the given boundary condition where f(x) = sin(πx), bn = 1 for n=1 but bn = 0 for integer n>1 as then bn is the integral of orthogonal functions. Hence, here the exact solution is u(x,t) = sin(πx)cos(πt). This is compared to the numerical solution to show the effectiveness of this numerical method.
+
+
+<!--- equations displayed with https://editor.codecogs.com/ -- LATEX -> URL encoded --->
