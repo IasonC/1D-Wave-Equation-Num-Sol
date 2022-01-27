@@ -39,3 +39,5 @@ For the given boundary condition where f(x) = sin(πx), bn = 1 for n=1 but bn = 
 
 
 <!--- equations displayed with https://editor.codecogs.com/ -- LATEX -> URL encoded --->
+
+$$A=\begin{bmatrix}2 & 0\\0 & 3\end{bmatrix}$$
