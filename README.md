@@ -3,7 +3,7 @@
 *MATLAB code to numerically solve a 1D Wave Equation and compare to exact solution*
 
 ## Scenario
-The applications of the Wave Equation are vast, from image processing to system vibrations. This particular scenario is modelling the perpendicular displacement of a power transmission cable of length L=1m over an arbitrary time interval from t=0s. The displacement is essentially conduction gallop caused by external environmental factors, predominantly wind.
+The applications of the Wave Equation are vast, from image processing to system vibrations. This code is directly applied to a perpendicularly-vibrating string of length 1m (so solving in the x-dimension between bounds 0 and 1) for arbitrary time since t = 0s (in the solution, time bounds 0 and 0.5s are chosen). This is a driven system due to an external environmental applied force on the string. The code is automated, so you can change the parameters to observe the solution for a longer time interval or with finer step sizes.
 
 ## Boundary Conditions (Cauchy Conditions)
 The cable is:
