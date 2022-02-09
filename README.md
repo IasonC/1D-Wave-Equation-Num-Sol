@@ -3,7 +3,7 @@
 *MATLAB code to numerically solve a 1D Wave Equation and compare to exact solution*
 
 ## Scenario
-The applications of the Wave Equation are vast, from image processing to system vibrations. This code is directly applied to a perpendicularly-vibrating string of length 1m (so solving in the x-dimension between bounds 0 and 1) for arbitrary time since t = 0s (in the solution, time bounds 0 and 0.5s are chosen). This is a driven system due to an external environmental applied force on the string. The code is automated, so you can change the parameters to observe the solution for a longer time interval or with finer step sizes.
+The applications of the Wave Equation are vast, from image processing to system vibrations. This code is directly applied to a perpendicularly-vibrating system linearly defined along the x-axis with length 1m (so solving in the x-dimension between bounds 0 and 1) for arbitrary time since t = 0s (in the solution, time bounds 0 and 0.5s are chosen). This is a driven system due to an external environmental applied force on the string. The code is automated, so you can change the parameters to observe the solution for a longer time interval or with finer step sizes.
 
 ## Boundary Conditions (Cauchy Conditions)
 The cable is:
