@@ -3,10 +3,12 @@
 *MATLAB code to numerically solve a 1D Wave Equation and compare to exact solution*
 
 ## Scenario
-The applications of the Wave Equation are vast, from image processing to system vibrations. This code is directly applied to a perpendicularly-vibrating system linearly defined along the x-axis with length 1m (so solving in the x-dimension between bounds 0 and 1) for arbitrary time since t = 0s (in the solution, time bounds 0 and 0.5s are chosen). This is a driven system due to an external environmental applied force on the string. The code is automated, so you can change the parameters to observe the solution for a longer time interval or with finer step sizes.
+The applications of the Wave Equation are vast, from image processing to system vibrations. This code is directly applied to a perpendicularly-vibrating system linearly defined along the x-axis with some length L (so solving in the x-dimension between bounds 0 and L) for arbitrary time since t = 0s (in the solution, time bounds 0 and 0.5s are chosen). This is a driven system due to an external environmental applied force on the system. The code is automated, so you can change the parameters to observe the solution for a longer time interval or with finer step sizes.
+
+The solution to the 1D Wave Equation presented here is very versatile: it can be applied to a plethora of perpendicularly-vibrating systems, from strings or cables to bridges! Also, the code used to solve the 1D Wave Equation is highly dynamic: the parameters can be set to control the x-dimension length L of the system, the time interval studied in the solution, and even the initial displacement of the system at t = 0s due to external stimuli!
 
 ## Boundary Conditions (Cauchy Conditions)
-The cable is:
+The system is:
 - fixed at both ends ![equation](https://latex.codecogs.com/svg.image?%5CRightarrow%20u(x=0,%20t)%20=%20u(0,t)%20=%200,%20u(x=L,%20t)%20=%20u(L,%20t)%20=%200)
 - initially at rest ![equation](https://latex.codecogs.com/svg.image?%5CRightarrow%20%5Cpartial%20u(x,%20t=0)/%5Cpartial%20t%20=%20%5Cpartial%20u/%5Cpartial%20t%20%5Crvert_%7Bt=0%7D%20=%200)
 - initially displaced to a general position f(x) = sin(πx) ![equation](https://latex.codecogs.com/svg.image?%5CRightarrow%20u(x,%20t=0)%20=%20u(x,0)%20=%20f(x)%20=%20%5Csin(%5Cpi%20x))
