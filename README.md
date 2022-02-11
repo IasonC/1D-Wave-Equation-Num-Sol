@@ -13,6 +13,8 @@ The system is:
 - initially at rest ![equation](https://latex.codecogs.com/svg.image?%5CRightarrow%20%5Cpartial%20u(x,%20t=0)/%5Cpartial%20t%20=%20%5Cpartial%20u/%5Cpartial%20t%20%5Crvert_%7Bt=0%7D%20=%200)
 - initially displaced to a general position f(x) = sin(πx) ![equation](https://latex.codecogs.com/svg.image?%5CRightarrow%20u(x,%20t=0)%20=%20u(x,0)%20=%20f(x)%20=%20%5Csin(%5Cpi%20x))
 
+_Note that the initial displacement f(x) of the system can be set to a different function to observe the system response to a different initial stimulus._
+
 ## Theoretical Underpinning of Numerical Method
 The general n-dimension Wave Equation is\
 ![equation](https://latex.codecogs.com/svg.image?\frac{\partial&space;^2&space;u}{\partial&space;t^2}&space;=&space;a^2&space;\nabla^2&space;u)
